@@ -2,7 +2,7 @@ const express = require("express");
 const Intercom = require('intercom-client');
 const cors = require('cors');
 
-const port = 3000;
+const port = process.env.port || 3000;
 const app = express();
 const accessToken = "dG9rOjJkZjI4NzI0XzE0ZWZfNDY1Ml9iMDQ3X2FjNDliOWYzZWU0NDoxOjA=";
 const client = new Intercom.Client({ token: accessToken });
